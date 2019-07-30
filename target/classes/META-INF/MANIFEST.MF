@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: SS00510219
+Build-Jdk: 11.0.1
+Implementation-Title: my-telecom-account
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.techm.telecom
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/my-telecom-account
+Created-By: Maven Integration for Eclipse
+
