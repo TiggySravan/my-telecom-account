@@ -7,4 +7,4 @@ RUN mkdir -p /usr/local/tomcat/conf
 # Copy configurations (Tomcat users, Manager app)
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/
-COPY my-telecom-account-0.0.1-SNAPSHOT.jar  /usr/local/tomcat/webapps/
+COPY target/my-telecom-account-0.0.1-SNAPSHOT.jar  /usr/local/tomcat/webapps/
