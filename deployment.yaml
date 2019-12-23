@@ -1,0 +1,21 @@
+apiVersion: apps/v2
+kind: Deployment
+metadata:
+  name: Telecom
+  labels:
+    app: 
+spec:
+  selector:
+    matchLabels:
+      app: Telecom
+  template:
+    metadata:
+      labels:
+        app: Telecom
+    spec:
+      containers:
+      - image: lp00601139/telecom-account
+        name: Telecom
+        ports:
+        - containerPort: 8081
+          name: Telecom
