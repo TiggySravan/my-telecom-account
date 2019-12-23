@@ -1,10 +1,9 @@
-FROM tomcat:8.5.11
+FROM tomcat:8.0-alpine
+
 MAINTAINER Lakshmi P <lakshminarayanan@techm.com>
 
-# Update Apt and then install Nano editor (RUN can be removed)
-RUN mkdir -p /usr/local/tomcat/conf
+ADD my-telecom-account-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/
 
-# Copy configurations (Tomcat users, Manager app)
-COPY tomcat-users.xml /usr/local/tomcat/conf/
-COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/
-COPY target/my-telecom-account-0.0.1-SNAPSHOT.jar  /usr/local/tomcat/webapps/
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
